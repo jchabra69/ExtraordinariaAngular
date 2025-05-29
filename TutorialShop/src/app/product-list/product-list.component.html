@@ -1,0 +1,21 @@
+<h2>Products</h2>
+
+<div class="product-grid">
+  <div class="product-card" *ngFor="let product of products">
+    <h3>
+      <a [routerLink]="['/products', product.id]" [title]="product.name + ' details'">
+       {{ product.name }}
+      </a>
+    </h3>
+
+    <p *ngIf="product.description">
+      {{ product.description }}
+    </p>
+
+    <p><strong>{{ product.price | currency }}</strong></p>
+
+    <button type="button" (click)="share()">Share</button>
+
+    <app-product-alerts [product]="product" (notify)="onNotify()"></app-product-alerts>
+  </div>
+</div>

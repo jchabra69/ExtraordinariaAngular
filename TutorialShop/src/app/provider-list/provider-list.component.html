@@ -1,0 +1,13 @@
+<h2>Providers List</h2>
+
+<ul>
+  <li *ngFor="let provider of providers">
+    <h3>
+      <a [routerLink]="['/providers', provider.id]">
+        {{ provider.name }}
+      </a>
+    </h3>
+    <p>{{ provider.description }}</p>
+    <p><a href="{{ provider.website }}" target="_blank" rel="noopener noreferrer">Visita su web</a></p>
+  </li>
+</ul>

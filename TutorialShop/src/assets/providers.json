@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "MediaMarkt",
+    "website": "https://www.mediamarkt.es",
+    "description": "Tienda líder en electrónica de consumo, informática y electrodomésticos."
+  },
+  {
+    "id": 2,
+    "name": "El Corte Inglés",
+    "website": "https://www.elcorteingles.es",
+    "description": "Gran almacén con amplia selección de tecnología, moda y más."
+  },
+  {
+    "id": 3,
+    "name": "PcComponentes",
+    "website": "https://www.pccomponentes.com",
+    "description": "Especialistas en informática, electrónica y tecnología."
+  },
+  {
+    "id": 4,
+    "name": "The Phone House",
+    "website": "https://www.phonehouse.es",
+    "description": "Tienda especializada en móviles libres y accesorios."
+  },
+  {
+    "id": 5,
+    "name": "Carrefour",
+    "website": "https://www.carrefour.es",
+    "description": "Supermercado y tienda de electrónica con presencia nacional."
+  },
+  {
+    "id": 6,
+    "name": "Worten",
+    "website": "https://www.worten.es",
+    "description": "Tienda de tecnología, electrodomésticos y gaming."
+  }
+]

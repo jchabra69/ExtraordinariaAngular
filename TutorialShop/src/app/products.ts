@@ -1,0 +1,108 @@
+export interface Product {
+  id: number;
+  name: string;
+  price: number;
+  description: string;
+  providerId: number; 
+}
+
+export const products: Product[] = [
+  {
+    "id": 1,
+    "name": "Phone XL",
+    "price": 799,
+    "description": "A large phone with one of the best screens",
+    "providerId": 1
+  },
+  {
+    "id": 2,
+    "name": "Phone Mini",
+    "price": 699,
+    "description": "A great phone with one of the best cameras",
+    "providerId": 2
+  },
+  {
+    "id": 3,
+    "name": "Phone Standard",
+    "price": 299,
+    "description": "",
+    "providerId": 3
+  },
+  {
+    "id": 4,
+    "name": "Samsung Galaxy S24 Ultra",
+    "price": 1299,
+    "description": "Pantalla AMOLED de 6.8'', cámara de 200 MP y procesador Snapdragon 8 Gen 3.",
+    "providerId": 1
+  },
+  {
+    "id": 5,
+    "name": "iPhone 15 Pro",
+    "price": 1199,
+    "description": "Titanio, chip A17 Pro y cámara ProMotion con zoom óptico 5x.",
+    "providerId": 2
+  },
+  {
+    "id": 6,
+    "name": "Google Pixel 8",
+    "price": 799,
+    "description": "Fotografía computacional avanzada, Android puro y pantalla OLED de 120 Hz.",
+    "providerId": 3
+  },
+  {
+    "id": 7,
+    "name": "Xiaomi 13T Pro",
+    "price": 649,
+    "description": "Carga ultra rápida, pantalla AMOLED 144Hz y cámara Leica.",
+    "providerId": 4
+  },
+  {
+    "id": 8,
+    "name": "Motorola Edge 40",
+    "price": 499,
+    "description": "Diseño curvo, carga rápida de 68W y cámara de 50 MP.",
+    "providerId": 5
+  },
+  {
+    "id": 9,
+    "name": "OnePlus 11",
+    "price": 849,
+    "description": "Rendimiento de gama alta con OxygenOS y colaboración con Hasselblad.",
+    "providerId": 6
+  },
+  {
+    "id": 10,
+    "name": "Realme GT Neo 5",
+    "price": 599,
+    "description": "Carga de 240W, Snapdragon 8+ Gen 1 y gran rendimiento gaming.",
+    "providerId": 1
+  },
+  {
+    "id": 11,
+    "name": "iPhone SE (3ª gen)",
+    "price": 529,
+    "description": "Tamaño compacto, chip A15 Bionic y botón Home clásico.",
+    "providerId": 2
+  },
+  {
+    "id": 12,
+    "name": "Samsung Galaxy A54",
+    "price": 399,
+    "description": "Gran equilibrio entre diseño, rendimiento y batería.",
+    "providerId": 5
+  },
+  {
+    "id": 13,
+    "name": "POCO F5 Pro",
+    "price": 499,
+    "description": "Pantalla WQHD+, Snapdragon 8+ Gen 1 y excelente calidad/precio.",
+    "providerId": 4
+  }
+];
+
+
+/*
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+*/

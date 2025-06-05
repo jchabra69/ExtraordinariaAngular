@@ -56,6 +56,7 @@ import { HousingLocation } from '../housinglocation';
       <label for="photo">Photo URL (optional):</label>
       <input id="photo" type="url" formControlName="photo" />
 
+
       <button type="submit" [disabled]="form.invalid">Register House</button>
     </form>
   `,
@@ -89,7 +90,7 @@ export class AddHousingComponent implements OnInit {
   });
 
   ngOnInit() {
-    // Si hay dato,s recuperalos
+    // Si hay datos recuperalos
     const saved = localStorage.getItem(this.storageKey);
     if (saved) {
       try {
@@ -105,6 +106,7 @@ export class AddHousingComponent implements OnInit {
   }
 
   onSecuritySystemChange(event: Event) {
+
     const checkbox = event.target as HTMLInputElement;
     const selectedOptions = this.form.value.securitySystems ?? [];
 
@@ -112,6 +114,7 @@ export class AddHousingComponent implements OnInit {
       this.form.patchValue({
         securitySystems: [...selectedOptions, checkbox.value],
       });
+
     } else {
       this.form.patchValue({
         securitySystems: selectedOptions.filter(
@@ -121,33 +124,32 @@ export class AddHousingComponent implements OnInit {
     }
   }
 
-  addHouse() {
-    const formValue = this.form.value;
+  async addHouse() {
+  const formValue = this.form.value;
 
-    this.housingService.getAllHousingLocations().then((houses) => {
-      const maxId = houses.reduce(
-        (max, loc) => (loc.id > max ? loc.id : max),
-        0
-      );
+  const houses = await this.housingService.getAllHousingLocations();
+  const maxId = houses.reduce(
+    (max, loc) => (loc.id > max ? loc.id : max),
+    0
+  );
 
-      const newHouse: HousingLocation = {
-        id: maxId + 1,
-        name: formValue.name ?? '',
-        city: formValue.city ?? '',
-        state: formValue.state ?? '',
-        photo: formValue.photo ?? '',
-        availableUnits: parseInt(formValue.availableUnits ?? '0', 10),
-        wifi: formValue.wifi ?? false,
-        laundry: formValue.laundry ?? false,
-        securitySystems: formValue.securitySystems ?? [],
-      };
+  const newHouse: HousingLocation = {
+    id: maxId + 1,
+    name: formValue.name ?? '',
+    city: formValue.city ?? '',
+    state: formValue.state ?? '',
+    photo: formValue.photo?.trim() || 'assets/noPhoto.webp',
+    availableUnits: parseInt(formValue.availableUnits ?? '0', 10),
+    wifi: formValue.wifi ?? false,
+    laundry: formValue.laundry ?? false,
+    securitySystems: formValue.securitySystems ?? [],
+    status: 'disponible',
+  };
 
-      this.housingService.addHousingLocation(newHouse);
+  await this.housingService.addHousingLocation(newHouse);
 
-      // LIMPIA EL LOCALSTORAGE
-      localStorage.removeItem(this.storageKey);
+  localStorage.removeItem(this.storageKey);
+  this.router.navigateByUrl('/');
+}
 
-      this.router.navigateByUrl('/');
-    });
-  }
 }

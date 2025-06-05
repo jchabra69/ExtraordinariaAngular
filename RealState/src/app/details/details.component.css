@@ -6,6 +6,12 @@
   float: right;
 }
 
+form.disabled {
+  opacity: 0.6;
+  pointer-events: none; /* Opcional para evitar interacción */
+}
+
+
 .listing-heading {
   font-size: 48pt;
   font-weight: bold;

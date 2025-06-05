@@ -8,4 +8,5 @@ export interface HousingLocation {
   wifi: boolean;
   laundry: boolean;
   securitySystems?: string[]; 
+  status?: string;
 }

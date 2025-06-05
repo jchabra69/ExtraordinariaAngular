@@ -7,6 +7,32 @@
   color: var(--primary-color);
   padding: 10px 20px 0 20px;
 }
+
+.listing-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 12px; 
+}
+
+
+button.primary {
+  width: auto;
+  padding: 8px 16px;
+}
+
+
+
+.listing-availability {
+  padding: 0 20px;     
+  margin-top: 0;         
+  white-space: nowrap;  
+  overflow: hidden;      
+  text-overflow: ellipsis;
+  font-weight: 600;     
+  color: var(--primary-color);
+}
+
 .listing-photo {
   height: 250px;
   width: 100%;

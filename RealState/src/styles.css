@@ -15,9 +15,17 @@ body {
 }
 
 button.primary {
-  padding: 10px;
+  padding: 10px 20px;
   border: solid 1px var(--primary-color);
   background: var(--primary-color);
   color: white;
   border-radius: 8px;
+  cursor: pointer; /* Esto es clave para que sea clickeable */
+  user-select: none; /* Opcional: para evitar selección de texto accidental */
+  transition: background-color 0.3s ease;
 }
+
+button.primary:hover {
+  background-color: #4a45a8; /* Un tono más oscuro para hover */
+}
+

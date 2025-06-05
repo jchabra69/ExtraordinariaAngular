@@ -22,6 +22,12 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
           {{ housingLocation?.city }}, {{ housingLocation?.state }}
         </p>
       </section>
+
+      <!-- Mostrar status -->
+      <p class="listing-status">
+        <strong>Status:</strong> {{ housingLocation?.status }}
+      </p>
+
       <section class="listing-features">
         <h2 class="section-heading">About this housing location</h2>
         <ul>
@@ -48,17 +54,49 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
       </section>
 
       <section class="listing-apply">
-        <h2 class="section-heading">Apply now to live here</h2>
-        <form [formGroup]="applyForm" (submit)="submitApplication()">
+        <h2 class="section-heading">
+          {{
+            canApply()
+              ? 'Apply now to live here'
+              : 'Not enough units available'
+          }}
+        </h2>
+        <form
+          [formGroup]="applyForm"
+          (submit)="submitApplication()"
+          [class.disabled]="!canApply()"
+        >
           <label for="first-name">First Name</label>
-          <input id="first-name" type="text" formControlName="firstName" />
+          <input
+            id="first-name"
+            type="text"
+            formControlName="firstName"
+            [disabled]="!canApply()"
+          />
 
           <label for="last-name">Last Name</label>
-          <input id="last-name" type="text" formControlName="lastName" />
+          <input
+            id="last-name"
+            type="text"
+            formControlName="lastName"
+            [disabled]="!canApply()"
+          />
 
           <label for="email">Email</label>
-          <input id="email" type="email" formControlName="email" />
-          <button type="submit" class="primary">Apply now</button>
+          <input
+            id="email"
+            type="email"
+            formControlName="email"
+            [disabled]="!canApply()"
+          />
+
+          <button
+            type="submit"
+            class="primary"
+            [disabled]="!canApply() || applyForm.invalid"
+          >
+            Apply now
+          </button>
         </form>
       </section>
     </article>
@@ -85,11 +123,29 @@ export class DetailsComponent {
       });
   }
 
-  submitApplication() {
-    this.housingService.submitApplication(
-      this.applyForm.value.firstName ?? '',
-      this.applyForm.value.lastName ?? '',
-      this.applyForm.value.email ?? ''
+  canApply(): boolean {
+    return (
+      this.housingLocation?.status === 'disponible' &&
+      this.housingLocation?.availableUnits! > 0
     );
+  }
+
+  async submitApplication() {
+    if (!this.housingLocation || !this.canApply()) return;
+
+    console.log('Actualizando casa:', this.housingLocation.id);
+
+    this.housingLocation.availableUnits -= 1;
+    if (this.housingLocation.availableUnits === 0) {
+      this.housingLocation.status = 'reservado';
+    }
+
+    try {
+      await this.housingService.updateHousingLocation(this.housingLocation);
+    } catch (error) {
+      console.error('Error actualizando la casa:', error);
+    }
+
+    this.applyForm.reset();
   }
 }

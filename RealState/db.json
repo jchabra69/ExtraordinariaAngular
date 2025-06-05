@@ -1,7 +1,7 @@
 {
   "locations": [
     {
-      "id": 0,
+      "id": "0",
       "name": "Acme Fresh Start Housing",
       "city": "Chicago",
       "state": "IL",
@@ -9,14 +9,19 @@
       "availableUnits": 4,
       "wifi": true,
       "laundry": true,
-      "securitySystems": ["Alarms", "Cameras", "Smoke detectors"],
+      "securitySystems": [
+        "Alarms",
+        "Cameras",
+        "Smoke detectors"
+      ],
       "coordinates": {
         "latitude": 41.8781,
         "longitude": -87.6298
-      }
+      },
+      "status": "disponible"
     },
     {
-      "id": 1,
+      "id": "1",
       "name": "A113 Transitional Housing",
       "city": "Santa Monica",
       "state": "CA",
@@ -24,14 +29,18 @@
       "availableUnits": 0,
       "wifi": false,
       "laundry": true,
-      "securitySystems": ["Reinforced doors", "Cameras"],
+      "securitySystems": [
+        "Reinforced doors",
+        "Cameras"
+      ],
       "coordinates": {
         "latitude": 34.0226,
         "longitude": -118.4957
-      }
+      },
+      "status": "vendido"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Warm Beds Housing Support",
       "city": "Juneau",
       "state": "AK",
@@ -39,14 +48,17 @@
       "availableUnits": 1,
       "wifi": false,
       "laundry": false,
-      "securitySystems": ["Smoke detectors"],
+      "securitySystems": [
+        "Smoke detectors"
+      ],
       "coordinates": {
         "latitude": 58.3019,
         "longitude": -134.4197
-      }
+      },
+      "status": "disponible"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Homesteady Housing",
       "city": "Chicago",
       "state": "IL",
@@ -54,14 +66,18 @@
       "availableUnits": 1,
       "wifi": true,
       "laundry": false,
-      "securitySystems": ["Alarms", "Smoke detectors"],
+      "securitySystems": [
+        "Alarms",
+        "Smoke detectors"
+      ],
       "coordinates": {
         "latitude": 41.8781,
         "longitude": -87.6298
-      }
+      },
+      "status": "disponible"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Happy Homes Group",
       "city": "Gary",
       "state": "IN",
@@ -69,14 +85,17 @@
       "availableUnits": 1,
       "wifi": true,
       "laundry": false,
-      "securitySystems": ["Reinforced doors"],
+      "securitySystems": [
+        "Reinforced doors"
+      ],
       "coordinates": {
         "latitude": 41.5934,
-        "longitude": -87.3460
-      }
+        "longitude": -87.346
+      },
+      "status": "disponible"
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Hopeful Apartment Group",
       "city": "Oakland",
       "state": "CA",
@@ -84,14 +103,18 @@
       "availableUnits": 2,
       "wifi": true,
       "laundry": true,
-      "securitySystems": ["Cameras", "Alarms"],
+      "securitySystems": [
+        "Cameras",
+        "Alarms"
+      ],
       "coordinates": {
         "latitude": 37.8044,
         "longitude": -122.2711
-      }
+      },
+      "status": "disponible"
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Seriously Safe Towns",
       "city": "Oakland",
       "state": "CA",
@@ -99,14 +122,19 @@
       "availableUnits": 5,
       "wifi": true,
       "laundry": true,
-      "securitySystems": ["Cameras", "Reinforced doors", "Smoke detectors"],
+      "securitySystems": [
+        "Cameras",
+        "Reinforced doors",
+        "Smoke detectors"
+      ],
       "coordinates": {
         "latitude": 37.8044,
         "longitude": -122.2711
-      }
+      },
+      "status": "disponible"
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Hopeful Housing Solutions",
       "city": "Oakland",
       "state": "CA",
@@ -114,14 +142,17 @@
       "availableUnits": 2,
       "wifi": true,
       "laundry": true,
-      "securitySystems": ["Alarms"],
+      "securitySystems": [
+        "Alarms"
+      ],
       "coordinates": {
         "latitude": 37.8044,
         "longitude": -122.2711
-      }
+      },
+      "status": "disponible"
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "Seriously Safe Towns",
       "city": "Oakland",
       "state": "CA",
@@ -129,14 +160,18 @@
       "availableUnits": 10,
       "wifi": false,
       "laundry": false,
-      "securitySystems": ["Smoke detectors", "Cameras"],
+      "securitySystems": [
+        "Smoke detectors",
+        "Cameras"
+      ],
       "coordinates": {
         "latitude": 37.8044,
         "longitude": -122.2711
-      }
+      },
+      "status": "disponible"
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "Capital Safe Towns",
       "city": "Portland",
       "state": "OR",
@@ -144,11 +179,45 @@
       "availableUnits": 6,
       "wifi": true,
       "laundry": true,
-      "securitySystems": ["Reinforced doors", "Cameras", "Alarms", "Smoke detectors"],
+      "securitySystems": [
+        "Reinforced doors",
+        "Cameras",
+        "Alarms",
+        "Smoke detectors"
+      ],
       "coordinates": {
         "latitude": 45.5051,
-        "longitude": -122.6750
-      }
+        "longitude": -122.675
+      },
+      "status": "disponible"
+    },
+    {
+      "id": "91",
+      "name": "Hotelazo la Roca Carioca",
+      "city": "Málaga Sity",
+      "state": "Wisconsin",
+      "photo": "assets/noPhoto.webp",
+      "availableUnits": 0,
+      "wifi": true,
+      "laundry": true,
+      "securitySystems": [
+        "alarms"
+      ],
+      "status": "reservado"
+    },
+    {
+      "id": "911",
+      "name": "Hotelazo la Roca Carioca 2",
+      "city": "Málaga Sity 2",
+      "state": "Benidorm",
+      "photo": "assets/noPhoto.webp",
+      "availableUnits": 2,
+      "wifi": true,
+      "laundry": true,
+      "securitySystems": [
+        "cameras"
+      ],
+      "status": "disponible"
     }
   ]
 }

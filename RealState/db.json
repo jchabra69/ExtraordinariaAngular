@@ -22,9 +22,9 @@
     },
     {
       "id": "1",
-      "name": "A113 Transitional Housing",
+      "name": "A113 Transitional Housingg",
       "city": "Santa Monica",
-      "state": "CA",
+      "state": "CAA",
       "photo": "https://angular.io/assets/images/tutorials/faa/brandon-griggs-wR11KBaB86U-unsplash.jpg",
       "availableUnits": 0,
       "wifi": false,
@@ -33,10 +33,6 @@
         "Reinforced doors",
         "Cameras"
       ],
-      "coordinates": {
-        "latitude": 34.0226,
-        "longitude": -118.4957
-      },
       "status": "vendido"
     },
     {

@@ -30,6 +30,14 @@ import { RouterModule } from '@angular/router';
 
     
   </div>
+
+  <button class="primary btnEditar" [routerLink]="['/edit', housingLocation.id]">
+    Edit
+  </button>
+
+
+
+  
 </section>
 
   `,

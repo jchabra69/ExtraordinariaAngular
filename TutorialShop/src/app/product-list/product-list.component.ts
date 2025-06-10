@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { products } from '../products';
+import { ProductService } from '../services/product.service';
 
 @Component({
   selector: 'app-product-list',
@@ -8,9 +9,25 @@ import { products } from '../products';
   styleUrls: ['./product-list.component.css']
 })
 
-export class ProductListComponent {
+export class ProductListComponent implements OnInit {
 
   products = [...products];
+
+  // Inyectamos el servicio en el constructor
+  constructor(private productService: ProductService) {}
+
+  // OnInit: cuando el componente se inicialice, llamamos al servicio para obtener los productos
+  ngOnInit(): void {
+    this.productService.getProducts().subscribe({
+      next: (products) => {
+        this.products = products; // Asignamos los productos recibidos para mostrarlos
+      },
+      error: (err) => {
+        console.error('Error cargando productos:', err);
+        // Aquí podrías manejar mostrar un mensaje de error en la plantilla si quieres
+      }
+    });
+  }
 
   share() {
     window.alert('The product has been shared!');

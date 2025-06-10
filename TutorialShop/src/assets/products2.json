@@ -1,0 +1,93 @@
+[
+  {
+    "product_id": "1",
+    "product_name": "Phone XL",
+    "cost": 799,
+    "details": "A large phone with one of the best screens",
+    "supplier": "1"
+  },
+  {
+    "product_id": "2",
+    "product_name": "Phone Mini",
+    "cost": 699,
+    "details": "A compact phone with great performance",
+    "supplier": "2"
+  },
+  {
+    "product_id": "3",
+    "product_name": "Phone Standard",
+    "cost": 299,
+    "details": "Basic performance with good screen size",
+    "supplier": "3"
+  },
+  {
+    "product_id": "4",
+    "product_name": "Samsung Galaxy S24 Ultra",
+    "cost": 1299,
+    "details": "AMOLED 6.8'', 200 MP camera, Snapdragon 8 Gen 3",
+    "supplier": "1"
+  },
+  {
+    "product_id": "5",
+    "product_name": "iPhone 15 Pro",
+    "cost": 1199,
+    "details": "Titanium body, A17 Pro chip, 5x optical zoom",
+    "supplier": "2"
+  },
+  {
+    "product_id": "6",
+    "product_name": "Google Pixel 8",
+    "cost": 799,
+    "details": "Pure Android, 120Hz OLED screen, computational photography",
+    "supplier": "3"
+  },
+  {
+    "product_id": "7",
+    "product_name": "Xiaomi 13T Pro",
+    "cost": 649,
+    "details": "144Hz AMOLED, fast charge, Leica camera",
+    "supplier": "4"
+  },
+  {
+    "product_id": "8",
+    "product_name": "Motorola Edge 40",
+    "cost": 499,
+    "details": "Curved design, 68W fast charging, 50MP camera",
+    "supplier": "5"
+  },
+  {
+    "product_id": "9",
+    "product_name": "OnePlus 11",
+    "cost": 849,
+    "details": "High-end performance, OxygenOS, Hasselblad camera",
+    "supplier": "6"
+  },
+  {
+    "product_id": "10",
+    "product_name": "Realme GT Neo 5",
+    "cost": 599,
+    "details": "240W fast charging, Snapdragon 8+ Gen 1",
+    "supplier": "1"
+  },
+  {
+    "product_id": "11",
+    "product_name": "iPhone SE (3rd Gen)",
+    "cost": 529,
+    "details": "Compact size, A15 Bionic chip, classic design",
+    "supplier": "2"
+  },
+  {
+    "product_id": "12",
+    "product_name": "Samsung Galaxy A54",
+    "cost": 399,
+    "details": "Well-balanced phone with strong battery and design",
+    "supplier": "5"
+  },
+  {
+    "product_id": "13",
+    "product_name": "POCO F5 Pro",
+    "cost": 499,
+    "details": "WQHD+ screen, Snapdragon 8+ Gen 1, great value",
+    "supplier": "4"
+  }
+]

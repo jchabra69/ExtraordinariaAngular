@@ -59,6 +59,17 @@ export class HousingService {
   }
 }
 
+async deleteHousingLocation(id: number): Promise<void> {
+  const response = await fetch(`${this.url}/${id}`, {
+    method: 'DELETE',
+  });
+
+  if (!response.ok) {
+    throw new Error('Error al borrar la vivienda');
+  }
+}
+
+
 
 
 }

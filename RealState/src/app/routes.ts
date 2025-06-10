@@ -3,6 +3,7 @@ import { HomeComponent } from './home/home.component';
 import { DetailsComponent } from './details/details.component';
 import { LoginComponent } from './login/login.component';
 import { AddHousingComponent } from './add-housing/add-housing.component';
+import { EditHouseComponent } from './edit-house/edit-house.component';
 
 const routeConfig: Routes = [
   {
@@ -24,6 +25,11 @@ const routeConfig: Routes = [
     path: 'add-housing',
     component: AddHousingComponent,
     title: 'Add a new house'
+  },
+  {
+    path: 'edit/:id',
+    component: EditHouseComponent,
+    title: 'Edit a house'
   }
 ];
 

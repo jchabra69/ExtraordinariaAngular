@@ -16,6 +16,7 @@ import { ShippingComponent } from "./shipping/shipping.component";
 import { ProviderDetailsComponent } from "./provider-details/provider-details.component";
 
 import { ProviderListComponent } from './provider-list/provider-list.component';
+import { CreateProductComponent } from "./create-product/create-product.component";
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { ProviderListComponent } from './provider-list/provider-list.component';
       { path: 'shipping', component: ShippingComponent },
       { path: "providers/:providerId", component: ProviderDetailsComponent },
       { path: "providers", component: ProviderListComponent },
+      { path: "create", component: CreateProductComponent },
 
     ]),
   ],
@@ -43,6 +45,7 @@ import { ProviderListComponent } from './provider-list/provider-list.component';
     ShippingComponent,
     ProviderDetailsComponent,
     ProviderListComponent,
+    CreateProductComponent
   ],
   bootstrap: [AppComponent],
 })

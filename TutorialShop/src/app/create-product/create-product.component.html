@@ -1,0 +1,31 @@
+<h2>Formulario para crear un producto</h2>
+
+<form [formGroup]="miFormulario" (ngSubmit)="addProduct()">
+
+    <label for="name">Nombre:</label>
+    <input id="name" type="text" formControlName="name" required />
+
+    <label for="price">Precio:</label>
+    <input id="price" type="number" formControlName="price" required />
+
+    <label for="description">Descripción:</label>
+    <input id="description" type="text" formControlName="description" required />
+
+    <label for="provider">Proveedor:</label>
+    <select id="provider" formControlName="providerId" required>
+        <option value="" disabled selected>Selecciona un proveedor</option>
+        <option *ngFor="let provider of providers" [value]="provider.id">
+            {{ provider.name }}
+        </option>
+    </select>
+
+    <div>
+
+        <button type="submit" [disabled]="miFormulario.invalid">Register Product</button>
+
+    </div>
+
+
+
+
+</form>
